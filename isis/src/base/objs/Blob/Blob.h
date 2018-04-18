@@ -58,6 +58,10 @@ namespace Isis {
    *                           in very large cubes.  This was caused by calling the wrong number
    *                           to string conversion function.  Introduced when refactoring the
    *                           IString class.  Fixes #1388.
+   *   @history 2018-04-18 Adam Goins - Modified Blob::Read(const QString &file, const Pvl &pvlLabels)
+   *                           to set the p_labelFile attribute to the file's path if the file was
+   *                           ingested given a detached path. Fixes an issue where detached paths
+   *                           could not be read. Fixes #5036.
    *
    * @todo Write class description, history, etc.
    */
