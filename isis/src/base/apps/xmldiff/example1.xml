@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>    <example>
+      <brief>Basic Comparison including spacing</brief>
+      <description>
+        This example will cover how to do a basic difference between two xml files to include file spacing.
+      </description>
+      <terminalInterface>
+        <commandLine>from=example1.xml from2=example2.xml ignorespacing=false</commandLine>
+        <description>Comparing example1.xml and example2.xml</description>
+      </terminalInterface>
+      <guiInterfaces>
+        <guiInterface>
+          <image width="450" height="550" src="assets/images/ex1interface.jpg">
+            <brief>Running this program with example1.xml and example2.xml with the ignoreSpacing flag set to false.</brief>
+            <description>
+              This shows how to run this program to compare the two xml files example1.xml and example2.xml to include differences in spacing.
+            </description>
+            <thumbnail width="164" height="200" caption="Differencing two files" src="assets/thumbs/ex2interface.jpg" />
+          </image>W
+        </guiInterface>
+      </guiInterfaces>
+      <dataFiles>
+        <dataFile path="assets/example1.xml">
+          <brief>example1.xml</brief>
+          <description>
+            This is the file used in the input parameter FROM. It will be compared with example2.xml.
+          </description>
+          <parameterName>FROM</parameterName>
+        </dataFile>
+        <dataFile path="assets/example2.xml">
+          <brief>example2.xml</brief>
+          <description>
+            This is the file used in the input parameter FROM2. It will be compared with example1.xml.
+          </description>
+          <parameterName>FROM2</parameterName>
+        </dataFile>
+      </dataFiles>
+      <outputImages>
+        <image width="511" height="93" src="assets/images/ex2output.jpg">
+          <brief>The results from comparing example1.xml and example2.xml including spacing</brief>
+          <description>
+            This is the output after running this program on example1.xml and example2.xml. The input xml files had identical content, however there was extra spacing in file 2.
+          </description>
+          <thumbnail width="200" height="36" caption="Results" src="assets/thumbs/ex2output.jpg" />
+        </image>
+      </outputImages>
+    </example>
+
+<application name="camstats" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="http://isis.astrogeology.usgs.gov/Schemas/Application/application.xsd">
+
+
+  <description>
+    <ul>
+      <li><def link="Latitude">Latitude</def></li>
+      <li><def link="Longitude">Longitude</def></li>
+      <li><def link="Phase Angle">Phase Angle2</def></li>
+      <li><def link="Sample Resolution">Sample Resolution</def></li>
+      <li><def link="Line Resolution">Line Resolution</def></li>
+      <li><def link="Pixel Resolution">Pixel Resoluion</def></li>
+      <li><def link="Oblique Pixel Resolution">Oblique Pixel Resolution</def></li>
+      <li><def link="Oblique Sample Resolution">Oblique Sample Resolution</def></li>
+      <li><def link="Emission Angle">EmissionAngle</def></li>
+
+      <li><def link="Incidence Angle">Incidence Angle</def></li>
+      <li><def>Aspect Ratio
+
+      </def></li>
+
+      <li><def link="Oblique Line Resolution">Oblique Line Resolution</def></li>
+      <li><def link="Local Solar Time">Local Solar Time</def></li>
+      <li><def link="North Azimuth">North Azimuth</def></li>
+    </ul>
+  </description>
+
+
+    <brief>
+      Generates and outputs camera statistics for a cube in raw camera geometry
+    </brief>
+</application>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<application name="camstats" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="http://isis.astrogeology.usgs.gov/Schemas/Application/application.xsd">
+
+
+  <description>
+    <ul>
+      <li><def link="Latitude">Latitude</def></li>
+      <li><def link="Longitude">Longitude</def></li>
+      <li><def link="Sample Resolution">Sample Resolution</def></li>
+      <li><def link="Line Resolution">Line Resolution</def></li>
+      <li><def link="Pixel Resolution">Pixel Resolution</def></li>
+      <li><def link="Oblique Line Resolution">Oblique Line Resolution</def></li>
+      <li><def link="Oblique Sample Resolution">Oblique Sample Resolution</def></li>
+      <li><def link="Oblique Pixel Resolution">Oblique Pixel Resolution</def></li>
+      <li><def link="Phase Angle">Phase Angle</def></li>
+      <li><def link="Emission Angle">EmissionAngle</def></li>
+      <li><def link="Incidence Angle">Incidence Angle</def></li>
+      <li><def>Aspect Ratio</def></li>
+
+      <li><def link="Local Solar Time">Local Solar Time</def></li>
+      <li><def link="North Azimuth">North Azimuth</def></li>
+    </ul>
+  </description>
+
+
+    <brief>
+      Generates and outputs camera statistics for a cube in raw camera geometry
+    </brief>
+</application>

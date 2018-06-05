@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<application name="xmldiff" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://isis.astrogeology.usgs.gov/Schemas/Application/application.xsd">
+
+  <brief>Compare two xml files</brief>
+
+  <description>
+    This program will compare two XML files without regard to the order of child tags.
+    The purpose of this program is for comparing PDS4 labels and nightly tests that may
+    output an xml file with attributes in random order. It is designed to be order-invariant
+    and will compare these files ignoring the order of xml attributes and ignoring any spacing
+    that may occur in the files.
+  </description>
+
+  <history>
+    <change name="Adam Goins" date="2018-04-13">
+      Original version
+    </change>
+  </history>
+
+  <category>
+    <categoryItem>System</categoryItem>
+  </category>
+
+  <groups>
+    <group name="Files">
+      <parameter name="FROM">
+        <type>filename</type>
+        <fileMode>input</fileMode>
+        <brief>
+          Input XML file 1
+        </brief>
+        <description>
+          The first file to be compared against.
+        </description>
+        <filter>
+          *.xml *.txt
+        </filter>
+      </parameter>
+
+       <parameter name="FROM2">
+        <type>filename</type>
+        <fileMode>input</fileMode>
+        <brief>
+          Input XML file 2
+        </brief>
+        <description>
+          The second file to be compared against.
+        </description>
+        <filter>
+          *.xml *.txt
+        </filter>
+      </parameter>
+       <parameter name="TO">
+        <type>filename</type>
+        <fileMode>output</fileMode>
+        <internalDefault>None</internalDefault>
+        <brief>
+          Differences
+        </brief>
+        <description>
+          This will output the differences to a text file in Pvl format.
+        </description>
+        <filter>
+          *.txt
+        </filter>
+      </parameter>
+    </group>
+  </groups>
+
+  <examples>
+    <example>
+      <brief>Basic Comparison ignoring spacing</brief>
+      <description>
+        This example will cover how to do a basic difference between two xml files to ignore file spacing.
+      </description>
+      <terminalInterface>
+        <commandLine>from=example1.xml from2=example2.xml</commandLine>
+        <description>Comparing example1.xml and example2.xml</description>
+      </terminalInterface>
+      <guiInterfaces>
+        <guiInterface>
+          <image width="450" height="550" src="assets/images/ex1interface.jpg">
+            <brief>Running this program with example1.xml and example2.xml</brief>
+            <description>
+              This shows how to run this program to compare the two xml files example1.xml and example2.xml.
+            </description>
+            <thumbnail width="164" height="200" caption="Differencing xml two files" src="assets/thumbs/ex1interface.jpg" />
+          </image>
+        </guiInterface>
+      </guiInterfaces>
+      <dataFiles>
+        <dataFile path="assets/example1.xml">
+          <brief>example1.xml</brief>
+          <description>
+            This is the file used in the input parameter FROM. It will be compared with example2.xml.
+          </description>
+          <parameterName>FROM</parameterName>
+        </dataFile>
+        <dataFile path="assets/example2.xml">
+          <brief>example2.xml</brief>
+          <description>
+            This is the file used in the input parameter FROM2. It will be compared with example1.xml.
+          </description>
+          <parameterName>FROM2</parameterName>
+        </dataFile>
+      </dataFiles>
+      <outputImages>
+        <image width="511" height="93" src="assets/images/ex1output.jpg">
+          <brief>The results from comparing example1.xml and example2.xml</brief>
+          <description>
+            This is the output after running this program on example1.xml and example2.xml. Since the input files differed, it shows that there is a difference.
+          </description>
+          <thumbnail width="200" height="36" caption="Results" src="assets/thumbs/ex1output.jpg" />
+        </image>
+      </outputImages>
+    </example>
+  </examples>
+</application>
