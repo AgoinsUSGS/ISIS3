@@ -16,8 +16,6 @@ int main(int argc, char *argv[]) {
 
   QString unitTestXml = Isis::FileName("$ISIS_SOURCE_DIR/src/base/objs/UserInterface/unitTest.xml").expanded();
   QString highpass = Isis::FileName("$ISISROOT/bin/xml/highpass.xml").expanded();
-  std::cout<<unitTestXml<<std::endl;
-  std::cout << highpass << std::endl;
   char *myArgv[15];// = {"unitTest", "from=input.cub", "to=output.cub"};
 
   for (int i = 0; i < 15; i++)
